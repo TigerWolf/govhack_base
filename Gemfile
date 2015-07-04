@@ -10,6 +10,12 @@ gem 'jquery-rails', '~> 3.0.0'
 gem 'grape', '~> 0.11.0'
 gem 'uglifier', '>= 1.0.3'
 gem 'zip-zip', '~> 0.2'
+gem 'sqlite3'
+gem "therubyracer"
+gem "twitter-bootstrap-rails"
+gem 'devise'
+gem 'devise-bootstrap-views'
+gem 'grape_devise'
 
 group :development, :test do
   gem 'rspec', '~> 3.1'
@@ -18,4 +24,5 @@ group :development, :test do
   gem 'selenium-webdriver', '~> 2.44.0'
   gem 'rubocop', '~> 0.28.0'
   gem 'nokogiri', '1.6.2.1'
+  gem "thin"
 end

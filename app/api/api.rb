@@ -7,4 +7,7 @@ class API < Grape::API
   mount Acme::Raise
   mount Acme::Protected
   mount Acme::Post
+
+  mount Ip::Categories
+  mount Ip::Patents
 end

@@ -48,9 +48,15 @@
         <a class="navbar-brand" href="#">GrapeOnRails</a>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
-            <li><%= link_to "Link1", "/path1"  %></li>
-            <li><%= link_to "Link2", "/path2"  %></li>
-            <li><%= link_to "Link3", "/path3"  %></li>
+            <% if user_signed_in? %>
+            <% binding.pry %>
+            <p class="navbar-text">Signed in as: <%= current_user[:email] %></p>
+            <li><%= link_to 'Sign out', destroy_user_session_path, :method=>'delete' %></li>
+            <li><%= link_to 'Edit account', edit_user_registration_path %></li>
+          <% else %>
+            <li><%= link_to 'Sign in', sign_in_path %></li>
+            <li><%= link_to 'Sign up', new_user_session %></li>
+          <% end %>
           </ul>
         </div>
       </div>

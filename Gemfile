@@ -17,6 +17,7 @@ gem 'devise'
 gem 'devise-bootstrap-views'
 gem 'grape_devise'
 
+
 group :development, :test do
   gem 'rspec', '~> 3.1'
   gem 'rspec-rails', '~> 3.1'
@@ -25,4 +26,7 @@ group :development, :test do
   gem 'rubocop', '~> 0.28.0'
   gem 'nokogiri', '1.6.2.1'
   gem "thin"
+  gem 'pry-rails'
+  gem "binding_of_caller"
+  gem "better_errors"
 end
